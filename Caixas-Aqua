@@ -1,0 +1,31 @@
+import random
+a=[1,2,3]
+aprimoramento=[]
+novo_aprimoramento=[]
+pedra_espiritual=[]
+
+quantidade_de_caixas=input("Quantidade de caixas aqua:")
+
+for x in a:
+    aprimoramento = []
+    novo_aprimoramento = []
+    pedra_espiritual = []
+
+    while True:
+        x=random.choice(a)
+        if x==1:
+            aprimoramento.append(x)
+        if x==2:
+            novo_aprimoramento.append(x)
+        if x==3:
+            pedra_espiritual.append(x)
+        if len(aprimoramento)+len(novo_aprimoramento)+len(pedra_espiritual)==int(quantidade_de_caixas):
+            break
+
+
+print("Quantidade de N.Aprimoramento:",len(novo_aprimoramento))
+print("Quantidade de Aprimoramento:",len(aprimoramento))
+print("Quantidade de Pedras Espirituais:",len(pedra_espiritual))
+print("Razão de aprimoramentos quantidade de caixas esperada:","33,3 %")
+
+print("Razão aprimoramentos por caixa:",(len(aprimoramento)/int(quantidade_de_caixas))*100,"%")
